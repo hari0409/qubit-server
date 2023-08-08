@@ -1,0 +1,32 @@
+{
+	"name": "kavach-server",
+	"version": "1.0.0",
+	"description": "Backend for flip-the-script web app",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"bcryptjs": "^2.4.3",
+		"colors": "^1.4.0",
+		"connect-multiparty": "^2.2.0",
+		"cors": "^2.8.5",
+		"cross-env": "^7.0.3",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"form-data": "^4.0.0",
+		"helmet": "^5.1.0",
+		"http-errors": "^2.0.0",
+		"mongoose": "^6.3.5",
+		"morgan": "^1.10.0",
+		"nodemailer": "^6.7.5"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.16"
+	}
+}
