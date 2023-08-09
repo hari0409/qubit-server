@@ -4,6 +4,7 @@ const path = require("path")
 const fs = require("fs")
 
 const bashPath = path.join("src/scripts/mem.bash")
+const datapath="/home/hari/Downloads/vol_analysis.txt"
 
 router.post("/mem", async (req, res, next) => {
     const { filePath } = req.body;
@@ -15,11 +16,16 @@ router.post("/mem", async (req, res, next) => {
             res.status(500).json({ status: "failure", error: 'Error executing script' });
             return
         }
-        if (stderr) {
-            console.error(`Stderr: ${stderr}`);
-        }
-        res.status(200).json({
-            status: "success"
+        fs.readFile(datapath, "utf-8", (err, data) => {
+            if (err) {
+                console.log(err.message);
+                return
+            }
+            console.log(data);
+            res.status(200).json({
+                msg: data,
+                status: "success"
+            })
         })
     });
 })

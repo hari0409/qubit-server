@@ -27,7 +27,7 @@ app.get("/health", async (req, res, next) => {
 
 // Mounting routers
 app.use("/api/obfuscator", require("./src/routes/obfuscator"));
-app.use("/api/ids", require("./src/routes/ids"));
+app.use("/api/sec", require("./src/routes/sec"));
 app.use("/api/mvt", require("./src/routes/mvt"));
 app.use("/api/mem", require("./src/routes/mem"));
 
