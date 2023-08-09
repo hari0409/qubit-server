@@ -147,5 +147,4 @@ def show_encrypted_image(cipher_image,folder_path):
 
     cipher_image = cipher_image.astype(np.uint8)
     im = Image.fromarray(cipher_image)
-    im.save(folder_path+"\\encrypted_image.png")
-    im.show()
+    im.save(folder_path+"/encrypted_image.png")

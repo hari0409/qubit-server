@@ -1,0 +1,6 @@
+matplotlib
+Pillow
+numpy
+pickle5
+opencv-python
+pandas

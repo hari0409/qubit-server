@@ -15,7 +15,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(helmet());
-if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(multipart());
@@ -28,6 +28,8 @@ app.get("/health", async (req, res, next) => {
 // Mounting routers
 app.use("/api/obfuscator", require("./src/routes/obfuscator"));
 app.use("/api/ids", require("./src/routes/ids"));
+app.use("/api/mvt", require("./src/routes/mvt"));
+app.use("/api/mem", require("./src/routes/mem"));
 
 
 app.use((req, res, next) => {

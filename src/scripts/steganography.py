@@ -24,4 +24,4 @@ def encode(image_path, message,folder_path):
                 break
         if message_index >= len(binary_message):
             break
-    img.save(folder_path+'\\encoded_image.png')
+    img.save(folder_path+'/encoded_image.png')
